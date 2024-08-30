@@ -1,0 +1,37 @@
+{
+  "name": "waytrack-server",
+  "version": "1.0.0",
+  "description": "Server of GPS tracking system",
+  "main": "main.js",
+  "type": "module",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "h02": "NODE_CONFIG_DIR=src/config/ nodemon src/protocol/h02Protocol.js",
+    "gps103": "NODE_CONFIG_DIR=src/config/ nodemon src/protocol/gps103Protocol.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/way-track/waytrack-server.git"
+  },
+  "keywords": [],
+  "author": "Jorge Toro <jolthgs@gmail.com> (https://jolthgs.wordpress.com)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/way-track/waytrack-server/issues"
+  },
+  "homepage": "https://github.com/way-track/waytrack-server#readme",
+  "dependencies": {
+    "config": "^3.3.11",
+    "date-fns": "^3.6.0",
+    "pino": "^9.1.0",
+    "pino-pretty": "^11.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.4.0",
+    "globals": "^15.4.0",
+    "nodemon": "^3.1.3"
+  }
+}
