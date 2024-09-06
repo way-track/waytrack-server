@@ -1,6 +1,9 @@
 # waytrack-server
 open source GPS tracking server.
 
+# Require
+Require Node.js v21 or later
+
 ## License
 Apache License, Version 2.0
 
