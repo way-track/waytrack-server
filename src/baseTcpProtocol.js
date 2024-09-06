@@ -16,15 +16,16 @@
 import net from "node:net";
 import logger from "./logger.js";
 
-
 export default class BaseTcpProtocol extends net.Server {
-    constructor(host="0.0.0.0", port, options) {
-        super(options);
-        this._port = port;
-        this._host = host;
+  constructor(host = "0.0.0.0", port, options) {
+    super(options);
+    this._port = port;
+    this._host = host;
 
-        this.listen(this._port, this._host, () => {
-            logger.info(`${new Date().toString()} Protocol listening ${this.address().address}:${this.address().port}`);
-        });
-    }
-};
+    this.listen(this._port, this._host, () => {
+      logger.info(
+        `${new Date().toString()} Protocol listening ${this.address().address}:${this.address().port}`,
+      );
+    });
+  }
+}

@@ -1,23 +1,23 @@
 export class BasePosition {
   constructor(device) {
     this.#device(device);
-    this.#peerParams(device);
-    this.#serverParams();
+    this.#peer(device);
+    this.#server();
   }
 
   #device(device) {
     this.device = {
-      device: device
-    }
+      device: device,
+    };
   }
 
-  #serverParams() {
+  #server() {
     this.server = {
       timestamp: Date.now(),
     };
   }
 
-  #peerParams(device) {
+  #peer(device) {
     this.peer = {
       ip: device.remoteAddress || null,
       port: device.remotePort || null,
